@@ -1,18 +1,67 @@
 <!doctype html>
 <html lang='en'>
-  <head>
-    <title>CS4241 Assignment 2</title>
-    <meta charset='utf-8' />
-    <script src='js/main.js'></script>
-    <link rel='stylesheet' href='css/main.css' />
-    
-    <!-- get rid of favicon error -->
-    <link rel='icon' href='data:;base64,iVBORw0KGgo=' />
-  </head>
-  <body>
-    <form>
-      <input type='text' id='yourname' value='your name here'>
-      <button>submit</button>
+
+<head>
+  <title>CS4241 Assignment 2</title>
+  <meta charset='utf-8' />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='js/main.js' defer></script>
+  <link rel='stylesheet' href='css/main.css' />
+
+  <!-- get rid of favicon error -->
+  <link rel='icon' href='data:;base64,iVBORw0KGgo=' />
+</head>
+
+<body>
+  <h1>Crowdsourced Number</h1>
+
+  <main>
+    <accumulator-display><small>Right now the number is: </small><strong id="accumulator">Awating server
+        data</strong></accumulator-display>
+
+    <h2>Change the number</h2>
+    <form id="operation-form">
+      <div>
+        <input type="radio" id="operator-select-add" name="operator" checked required value="plus" />
+        <label for="operator-select-add">&plus;</label>
+
+        <input type="radio" id="operator-select-sub" name="operator" value="minus" />
+        <label for="operator-select-sub">&minus;</label>
+
+        <input type="radio" id="operator-select-mul" name="operator" value="times" />
+        <label for="operator-select-mul">&times;</label>
+
+        <input type="radio" id="operator-select-div" name="operator" value="divide" />
+        <label for="operator-select-div">&divide;</label>
+      </div>
+
+      <input type="number" id="value-input" step="any" required name="value" />
+      <button type="submit">submit</button>
     </form>
-  </body>
+
+    <h2 id="history-header">History</h2>
+    <ul id="history-list">
+
+    </ul>
+
+    <h2>Admin mode</h2>
+    <p>Click <a id="admin-open">here</a> to access the admin panel</p>
+    <form id="admin-form" hidden>
+      <small>Enter the password to continue</small>
+      <input type="password" id="password-input" required name="password" />
+      <button type="submit">enter</button>
+    </form>
+  </main>
+  <!-- 
+  thie is basically just to reserve space for the admin password
+  I can't just set the margin on the bottom element because 
+  it pushes the password form down, but I can't set the margin
+  on the password form because you still have to scroll down
+  to see it
+
+  I'm sure there's a better way but it's late and I don't feel like looking it up
+  -->
+  <space-reserver></space-reserver>
+</body>
+
 </html>

@@ -1,8 +1,8 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
+  "name": "a2",
+  "version": "1",
+  "description": "CS4241 Assignment 2",
+  "author": "Dexter Haehnichen",
   "scripts": {
     "start": "node server.js"
   },
