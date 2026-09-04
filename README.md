@@ -3,6 +3,8 @@ The server keeps track of a number, and anyone can use the website as an interfa
 
 You can also view the current state of the number and the past operations submitted by everyone.
 
+**This project is self-hosted at http://www.onocu.com:3010**
+
 ## Technical Achievements
 - **Single-page app**: Created a single-page app that provides a form for users to submit changes to the number, and responds to changes in the number and operation history by retrieving the latest data from the server.
 - **Admin panel with basic authentication**: Added an admin panel to allow more extensive data manipulation for privileged users. The panel and the POST endpoints for its actions are protected by a password stored in a cookie. If a browser does not have the correct value for the cookie, access is denied. This is not a fully secure login system, but it doesn't matter because I'm telling you the password is `churros` right here anyways so you can grade it.
